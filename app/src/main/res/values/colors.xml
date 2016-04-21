@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--background color-->
+    <color name="backgroundColor">#bdcc5c00</color>
+
+    <!--Category Colors-->
+    <color name="categoryBackground">#e66705</color>
+    <color name="categoryText">@android:color/white</color>
+
+    <!--Meal Colors-->
+    <color name="mealBackground">#d5edca</color>
+    <color name="mealText">#c3e66d05</color>
+</resources>
