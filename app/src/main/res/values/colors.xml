@@ -7,11 +7,11 @@
     <!--background color-->
     <color name="backgroundColor">#bdcc5c00</color>
 
-    <!--Category Colors-->
+    <!--category Colors-->
     <color name="categoryBackground">#e66705</color>
     <color name="categoryText">@android:color/white</color>
 
-    <!--Meal Colors-->
+    <!--meal Colors-->
     <color name="mealBackground">#d5edca</color>
     <color name="mealText">#c3e66d05</color>
 </resources>

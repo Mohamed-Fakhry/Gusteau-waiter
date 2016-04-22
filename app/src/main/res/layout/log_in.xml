@@ -7,7 +7,7 @@
     android:padding="5dp"
     android:background="@color/backgroundColor"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.eastsound.remourasystem.MainActivity"
+    tools:context=".viewHolder.LogIn"
     android:theme="@style/AppTheme">
 
 
@@ -29,6 +29,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/userName"
             android:hint="User Name"
             android:textSize="22sp"
             android:layout_marginBottom="10dp"
@@ -39,6 +40,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/password"
             android:hint="Password"
             android:textSize="22sp"
             android:inputType="textPassword"

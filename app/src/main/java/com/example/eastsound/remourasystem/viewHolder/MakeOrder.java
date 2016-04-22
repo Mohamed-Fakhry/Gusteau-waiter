@@ -1,4 +1,4 @@
-package com.example.eastsound.remourasystem;
+package com.example.eastsound.remourasystem.viewHolder;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,10 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.eastsound.remourasystem.R;
 
 
 public class MakeOrder extends Fragment {
-    View[] section = new View[4] ;
+//    View[] section = new View[4] ;
     ImageView testImage;
 
     @Override
@@ -30,17 +31,18 @@ public class MakeOrder extends Fragment {
     }
 
     private void createAccordion(Activity myActivity) {
-
+/*
         section[0] = myActivity.findViewById(R.id.section1);
         section[1] = myActivity.findViewById(R.id.section2);
         section[2] = myActivity.findViewById(R.id.section3);
         section[3] = myActivity.findViewById(R.id.section4);
+*/
 
         testImage =(ImageView)myActivity.findViewById(R.id.image);
         Glide.with(this).load(R.drawable.pizza).into(testImage);
 
         View[] header = new View[4];
-
+/*
         header[0] = myActivity.findViewById(R.id.header1);
         header[1] = myActivity.findViewById(R.id.header2);
         header[2] = myActivity.findViewById(R.id.header3);
@@ -50,8 +52,9 @@ public class MakeOrder extends Fragment {
         for (int i = 0 ; i < header.length ;i++){
             setLisener(header[i],section[i]);
         }
+*/
     }
-
+/*
     private void setLisener(final View view, final View view2) {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +69,5 @@ public class MakeOrder extends Fragment {
                 }
             }
         });
-    }
+    }*/
 }

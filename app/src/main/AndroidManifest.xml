@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".viewHolder.LogIn"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -27,11 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MakeOrder"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MainPager"
+            android:name=".viewHolder.MainPager"
             android:label="@string/app_name" />
     </application>
 
