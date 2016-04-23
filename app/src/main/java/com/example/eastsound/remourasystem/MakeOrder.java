@@ -1,8 +1,9 @@
-package com.example.eastsound.remourasystem.viewHolder;
+package com.example.eastsound.remourasystem;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +12,15 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.example.eastsound.remourasystem.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 public class MakeOrder extends Fragment {
 //    View[] section = new View[4] ;
     ImageView testImage;
+    @Bind(R.id.categories)
+    RecyclerView categoryRecyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,6 +33,7 @@ public class MakeOrder extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        ButterKnife.bind(getActivity());
         createAccordion(getActivity());
     }
 
@@ -38,10 +45,10 @@ public class MakeOrder extends Fragment {
         section[3] = myActivity.findViewById(R.id.section4);
 */
 
-        testImage =(ImageView)myActivity.findViewById(R.id.image);
-        Glide.with(this).load(R.drawable.pizza).into(testImage);
+ //       testImage =(ImageView)myActivity.findViewById(R.id.image);
+//        Glide.with(this).load(R.drawable.pizza).into(testImage);
 
-        View[] header = new View[4];
+
 /*
         header[0] = myActivity.findViewById(R.id.header1);
         header[1] = myActivity.findViewById(R.id.header2);

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.eastsound.remourasystem">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -11,13 +12,14 @@
 
 
     <application
+        android:name=".Service.SetupService"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".viewHolder.LogIn"
+            android:name=".LogIn"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -27,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".viewHolder.MainPager"
+            android:name=".MainPager"
             android:label="@string/app_name" />
     </application>
 

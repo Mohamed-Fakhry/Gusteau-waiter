@@ -1,4 +1,4 @@
-package com.example.eastsound.remourasystem.viewHolder;
+package com.example.eastsound.remourasystem;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;

@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.eastsound.remourasystem.viewHolder.BlankFragmentB;
-import com.example.eastsound.remourasystem.viewHolder.MakeOrder;
+import com.example.eastsound.remourasystem.BlankFragmentB;
+import com.example.eastsound.remourasystem.MakeOrder;
 
 /**
  * Created by EAST SOUND on 15/04/2016.

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#bdcc5c00"
-    tools:context="com.example.eastsound.remourasystem.viewHolder.MainPager">
+    tools:context=".MainPager">
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="5dp"
-                tools:context=".viewHolder.LogIn">
+                tools:context=".LogIn">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -391,10 +392,25 @@
             </ScrollView>
 
         </RelativeLayout>
+
+    </LinearLayout>
+-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal">
+
             <Button
                 android:id="@+id/restButton"
                 android:layout_width="0dp"
@@ -414,6 +430,8 @@
                 android:background="@color/backgroundColor"
                 android:textColor="@color/categoryText"
                 />
+
         </LinearLayout>
+
     </LinearLayout>
 </FrameLayout>

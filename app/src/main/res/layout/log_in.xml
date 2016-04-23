@@ -7,7 +7,7 @@
     android:padding="5dp"
     android:background="@color/backgroundColor"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".viewHolder.LogIn"
+    tools:context=".LogIn"
     android:theme="@style/AppTheme">
 
 
@@ -60,6 +60,15 @@
             android:background="@color/backgroundColor"
             android:onClick="logIn"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:textColor="#d90c0c"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:id="@+id/accountError" />
 
     </LinearLayout>
 
