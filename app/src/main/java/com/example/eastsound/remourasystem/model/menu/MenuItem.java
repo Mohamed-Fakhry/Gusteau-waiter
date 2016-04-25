@@ -1,17 +1,26 @@
 package com.example.eastsound.remourasystem.model.menu;
 
+import com.google.gson.annotations.SerializedName;
+
 public class MenuItem {
+
+    @SerializedName("id")
     private int id;
+    @SerializedName("name")
     private String name;
-    private String Descrption;
+    @SerializedName("description")
+    private String description;
+    @SerializedName("price")
     private double price;
-    private Category category;
+    @SerializedName("category_id")
+    private int categoryId;
+    @SerializedName("image_url")
     private String imageURL;
 
-    public MenuItem(int id, String name, String Descrption, double price) {
+    public MenuItem(int id, String name, String description, double price) {
         this.id = id;
         this.name = name;
-        this.Descrption = Descrption;
+        this.description = description;
         this.price = price;
     }
 
@@ -31,12 +40,12 @@ public class MenuItem {
         this.name = name;
     }
 
-    public String getDescrption() {
-        return Descrption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescrption(String Descrption) {
-        this.Descrption = Descrption;
+    public void setDescription(String Descrption) {
+        this.description = Descrption;
     }
 
     public double getPrice() {
@@ -47,12 +56,12 @@ public class MenuItem {
         this.price = price;
     }
 
-    public Category getCategory() {
-        return category;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getImageURL() {

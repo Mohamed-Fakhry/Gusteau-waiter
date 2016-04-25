@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.example.eastsound.remourasystem.Service.SetupService;
 import com.example.eastsound.remourasystem.model.account.User;
+import com.example.eastsound.remourasystem.model.menu.Category;
+
 import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -28,30 +30,39 @@ public class LogIn extends AppCompatActivity {
 
     ArrayList<User> acounts ;
 
+    ArrayList<Category> categories;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         getAccounts();
+
+/*
+        for(Category category : categories){
+            Log.d("TEST",category.getId()+"");
+        }
+*/
     }
 
-    private void getAccounts() {
 
+    private void getAccounts() {
         SetupService.getservice.getAccount().enqueue(new Callback<ArrayList<User>>() {
             @Override
             public void onResponse(Call<ArrayList<User>> call, Response<ArrayList<User>> response) {
-                Log.d("TEST","success");
                 acounts = response.body();
+                Log.d("Test","Seccess");
             }
 
             @Override
             public void onFailure(Call<ArrayList<User>> call, Throwable t) {
-                Log.d("TEST","Fail");
                 t.printStackTrace();
+                Log.d("Test","Fail");
             }
         });
     }
+
 
     public void logIn(View view){
         String name = userNameET.getText().toString();
@@ -59,25 +70,27 @@ public class LogIn extends AppCompatActivity {
 
         if(name != null && password != null){
 
-            User waiter = new User();
-            waiter.setName(name);
-            waiter.setPassword(password);
+            User waiter = new User(name,password);
 
             if(checkAccount(waiter)){
+
                 Intent logINIntent = new Intent(this,MainPager.class);
                 startActivity(logINIntent);
                 finish();
+
             }
             else {
                 erorrTV.setText("Username or Password not match");
             }
         }
+
     }
 
     private Boolean checkAccount(User waiter){
         for (User user : acounts){
-            if(waiter.equals(user))
+            if(waiter.equals(user)){
                 return true;
+            }
         }
         return false;
     }

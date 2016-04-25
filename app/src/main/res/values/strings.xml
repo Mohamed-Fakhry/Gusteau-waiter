@@ -3,23 +3,6 @@
     <string name="app_name">Remoura System</string>
     <string name="action_settings">Settings</string>
 
-    <string name="section_1">PIZZA</string>
-    <string name="section_12">بيتزا و فطائر</string>
-    <string name="item_11">Meal 1</string>
-    <string name="item_12">Meal 2</string>
-    <string name="item_13">Meal 3</string>
-
-    <string name="section_2">SHAWARMA</string>
-    <string name="section_22">شاورما</string>
-    <string name="item_21">Meal 1</string>
-    <string name="item_22">Meal 2</string>
-    <string name="item_23">Meal 3</string>
-
-    <string name="section_3">WAFFLE &amp; CREPE</string>
-    <string name="section_32">وافل و كريب</string>
-    <string name="item_31">Meal 1</string>
-    <string name="item_32">Meal 2</string>
-    <string name="item_33">Meal 3</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->

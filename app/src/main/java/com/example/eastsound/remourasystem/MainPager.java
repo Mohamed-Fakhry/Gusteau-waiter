@@ -22,9 +22,7 @@ public class MainPager extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
         ButterKnife.bind(this);
-
         initViewPager();
     }
 

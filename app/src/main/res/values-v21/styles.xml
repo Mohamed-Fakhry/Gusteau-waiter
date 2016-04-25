@@ -1,9 +1,9 @@
 <resources>>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+    <style nameArbic="AppTheme.NoActionBar">
+        <item nameArbic="windowActionBar">false</item>
+        <item nameArbic="windowNoTitle">true</item>
+        <item nameArbic="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item nameArbic="android:statusBarColor">@android:color/transparent</item>
     </style>
 </resources>

@@ -8,9 +8,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by EAST SOUND on 22/04/2016.
- */
+
 public class SetupService extends Application{
 
     public static Service getservice;

@@ -12,6 +12,18 @@ public class User {
     @SerializedName("jobtitle")
     private String jobTitle;
 
+    public User(String name,String password){
+        this.userName = name;
+        this.password = password;
+    }
+
+    public User(int id,String name,String password,String jobTitle){
+        this.id = id;
+        this.userName = name;
+        this.password = password;
+        this.jobTitle = jobTitle;
+    }
+
     public int getId() {
         return id;
     }
