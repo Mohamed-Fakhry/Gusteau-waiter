@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="125dp"
-        android:id="@+id/categoryImage"
+        android:id="@+id/mealImage"
         android:background="#f9f7f7"
         android:scaleType="centerCrop" />
 

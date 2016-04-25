@@ -47,6 +47,11 @@ public class CategoryItemViewHolder extends RecyclerView.ViewHolder {
                     .load(R.drawable.pizza2)
                     .asBitmap()
                     .into(categoryImage);
+        else
+            Glide.with(categoryActivity)
+                    .load(R.drawable.pizza2)
+                    .asBitmap()
+                    .into(categoryImage);
 
         if (category.getNameArbic()!=null)
             categoryNameE.setText(category.getNameArbic());

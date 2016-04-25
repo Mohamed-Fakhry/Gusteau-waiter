@@ -14,4 +14,7 @@ public interface Service {
 
     @GET("/categories")
     Call<Responed> getcategories();
+
+    @GET("/notifications")
+    Call<Responed> getNotification();
 }

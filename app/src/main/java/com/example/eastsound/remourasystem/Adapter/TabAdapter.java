@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.eastsound.remourasystem.BlankFragmentB;
+import com.example.eastsound.remourasystem.NotificationFragment;
 import com.example.eastsound.remourasystem.MakeOrder;
 
 /**
@@ -19,7 +19,7 @@ public class TabAdapter extends FragmentPagerAdapter {
     public TabAdapter(FragmentManager fm) {
         super(fm);
         fragments[0] = new MakeOrder();
-        fragments[1] = new BlankFragmentB();
+        fragments[1] = new NotificationFragment();
     }
 
 

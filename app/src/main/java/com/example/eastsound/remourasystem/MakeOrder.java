@@ -30,6 +30,7 @@ public class MakeOrder extends Fragment {
 
     @Bind(R.id.categories)
     RecyclerView categoryRecyclerView;
+
     ArrayList<Category> categories;
 
     public static MakeOrder newMakeOrder(Bundle bundle){
