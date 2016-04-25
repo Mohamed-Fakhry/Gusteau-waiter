@@ -1,47 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="125dp"
-    android:id="@+id/header1"
+    android:layout_height="wrap_content"
+    android:id="@+id/categoryCard"
     android:padding="2dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:id="@+id/header1"
+        android:onClick="showMeals">
 
-    <ImageView
+        <ImageView
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:id="@+id/categoryImage"
         android:background="#f9f7f7"
         android:scaleType="centerCrop" />
 
-    <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:background="@color/backgroundColor"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/categoryNameE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:text="Pizza"
+                android:textColor="@color/categoryText"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/categoryNameA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="بيتزا"
+                android:textColor="@color/categoryText"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mealRecycle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
         android:padding="5dp"
-        android:background="@color/backgroundColor"
-        android:layout_alignParentBottom="true">
+        android:visibility="gone"/>
 
-        <TextView
-            android:id="@+id/categoryNameE"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:textStyle="bold"
-            android:text="Pizza"
-            android:textColor="@color/categoryText"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/categoryNameA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="بيتزا"
-            android:textColor="@color/categoryText"
-            android:textStyle="bold"
-            android:textSize="24sp" />
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
