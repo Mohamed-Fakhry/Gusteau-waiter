@@ -12,6 +12,6 @@ public interface Service {
     @GET("/restaurant")
     Call<ArrayList<User>> getAccount();
 
-   // @GET("/categories")
-  //  Call<Responed> login();
+    @GET("/categories")
+    Call<Responed> getcategories();
 }

@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="125dp"
     android:id="@+id/header1"
-    android:layout_marginTop="5dp"
+    android:padding="2dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="125dp"
         android:id="@+id/categoryImage"
-        android:background="#c6b7b7"
+        android:background="#f9f7f7"
         android:scaleType="centerCrop" />
 
     <LinearLayout

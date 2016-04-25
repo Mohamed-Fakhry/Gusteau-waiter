@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.example.eastsound.remourasystem.Service.SetupService;
 import com.example.eastsound.remourasystem.model.account.User;
-import com.example.eastsound.remourasystem.model.menu.Category;
-
 import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -29,8 +27,6 @@ public class LogIn extends AppCompatActivity {
     TextView erorrTV;
 
     ArrayList<User> acounts ;
-
-    ArrayList<Category> categories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
