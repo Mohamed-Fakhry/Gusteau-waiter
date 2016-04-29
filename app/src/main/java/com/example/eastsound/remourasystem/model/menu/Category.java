@@ -16,7 +16,6 @@ public class Category {
     private ArrayList<MenuItem> categoryItems;
 
 
-
     public Category(int id, String nameArbic,String imageURL,ArrayList<MenuItem> categoryItems) {
         this.id = id;
         this.nameArbic = nameArbic;

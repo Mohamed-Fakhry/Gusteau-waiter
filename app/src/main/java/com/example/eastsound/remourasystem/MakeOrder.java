@@ -10,8 +10,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.bumptech.glide.Glide;
 import com.example.eastsound.remourasystem.Service.Responed;
 import com.example.eastsound.remourasystem.Service.SetupService;
 import com.example.eastsound.remourasystem.adapter.CategoriesAdapter;
@@ -30,6 +32,8 @@ public class MakeOrder extends Fragment {
 
     @Bind(R.id.categories)
     RecyclerView categoryRecyclerView;
+    @Bind(R.id.background)
+    ImageView background;
 
     ArrayList<Category> categories;
 
@@ -50,6 +54,10 @@ public class MakeOrder extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.menu_order, container, false);
         ButterKnife.bind(this,view);
+        Glide.with(this)
+                .load(R.drawable.background)
+                .asBitmap()
+                .into(background);
         return view;
     }
 
@@ -68,6 +76,7 @@ public class MakeOrder extends Fragment {
         SetupService.getservice.getcategories().enqueue(new Callback<Responed>() {
             @Override
             public void onResponse(Call<Responed> call, Response<Responed> response) {
+
                 categories = response.body().getCategoryArrayList();
                 categoryRecyclerView.setLayoutManager(new LinearLayoutManager(activity, LinearLayout.VERTICAL,false));
                 CategoriesAdapter adapter = new CategoriesAdapter(activity,categories);

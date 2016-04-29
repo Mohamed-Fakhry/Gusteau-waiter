@@ -19,7 +19,6 @@
             android:id="@+id/notificationImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/logo"
             android:scaleType="fitXY"
             />
 

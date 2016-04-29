@@ -6,7 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.example.eastsound.remourasystem.Service.SetupService;
 import com.example.eastsound.remourasystem.model.account.User;
 import java.util.ArrayList;
@@ -17,12 +20,15 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LogIn extends AppCompatActivity {
+
+    @Bind(R.id.logo)
+    ImageView logo;
+    @Bind(R.id.background)
+    ImageView background;
     @Bind(R.id.userName)
     EditText userNameET;
-
     @Bind(R.id.password)
     EditText passwordET;
-
     @Bind(R.id.accountError)
     TextView erorrTV;
 
@@ -34,14 +40,15 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         getAccounts();
-
-/*
-        for(Category category : categories){
-            Log.d("TEST",category.getId()+"");
-        }
-*/
+        Glide.with(this)
+                .load(R.drawable.background)
+                .asBitmap()
+                .into(background);
+        Glide.with(this)
+                .load(R.drawable.pro_gusteau_logo)
+                .asBitmap()
+                .into(logo);
     }
-
 
     private void getAccounts() {
         SetupService.getservice.getAccount().enqueue(new Callback<ArrayList<User>>() {
@@ -59,7 +66,6 @@ public class LogIn extends AppCompatActivity {
         });
     }
 
-
     public void logIn(View view){
         String name = userNameET.getText().toString();
         String password = passwordET.getText().toString();
@@ -68,21 +74,25 @@ public class LogIn extends AppCompatActivity {
 
             User waiter = new User(name,password);
 
-            if(checkAccount(waiter)){
+            try {
+                getAccounts();
+                if(checkAccount(waiter)){
 
-                Intent logINIntent = new Intent(this,MainPager.class);
-                startActivity(logINIntent);
-                finish();
+                    Intent logINIntent = new Intent(this,MainPager.class);
+                    startActivity(logINIntent);
+                    finish();
 
-            }
-            else {
-                erorrTV.setText("Username or Password not match");
+                }
+                else {
+                    erorrTV.setText("Username or Password not match");
+                }
+            } catch (Exception e) {
+                erorrTV.setText("there is't connection");
             }
         }
-
     }
 
-    private Boolean checkAccount(User waiter){
+    private Boolean checkAccount(User waiter)throws Exception{
         for (User user : acounts){
             if(waiter.equals(user)){
                 return true;

@@ -7,9 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.example.eastsound.remourasystem.NotificationFragment;
 import com.example.eastsound.remourasystem.MakeOrder;
 
-/**
- * Created by EAST SOUND on 15/04/2016.
- */
 public class TabAdapter extends FragmentPagerAdapter {
 
     private final String[] tabTitles = {"Make Order","Notifications"};
@@ -21,7 +18,6 @@ public class TabAdapter extends FragmentPagerAdapter {
         fragments[0] = new MakeOrder();
         fragments[1] = new NotificationFragment();
     }
-
 
     @Override
     public CharSequence getPageTitle(int position) {

@@ -3,6 +3,7 @@ package com.example.eastsound.remourasystem.model.account;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
+
     @SerializedName("id")
     private int id;
     @SerializedName("username")

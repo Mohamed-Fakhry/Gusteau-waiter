@@ -12,9 +12,7 @@ import com.example.eastsound.remourasystem.model.notification.Notification;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * Created by EAST SOUND on 25/04/2016.
- */
+
 public class NotificationViewHolder extends RecyclerView.ViewHolder{
 
     @Bind(R.id.notificationImage)

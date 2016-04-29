@@ -12,9 +12,7 @@ import com.example.eastsound.remourasystem.viewHolder.MealItemViewHolder;
 
 import java.util.ArrayList;
 
-/**
- * Created by EAST SOUND on 25/04/2016.
- */
+
 public class MealsAdapter extends RecyclerView.Adapter <MealItemViewHolder>{
     ArrayList<MenuItem> mealsCategory;
     Activity categoryActivity;

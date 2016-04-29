@@ -10,8 +10,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.bumptech.glide.Glide;
 import com.example.eastsound.remourasystem.Service.Responed;
 import com.example.eastsound.remourasystem.Service.SetupService;
 import com.example.eastsound.remourasystem.adapter.NotificationAdapter;
@@ -30,6 +32,8 @@ public class NotificationFragment extends Fragment {
 
     @Bind(R.id.notificationRV)
     RecyclerView noificationRV;
+    @Bind(R.id.background)
+    ImageView background;
 
     ArrayList<Notification> notifications;
 
@@ -44,6 +48,10 @@ public class NotificationFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.notifications_layout, container, false);
         ButterKnife.bind(this,view);
+        Glide.with(this)
+                .load(R.drawable.background)
+                .asBitmap()
+                .into(background);
         return view;
     }
 
@@ -55,6 +63,12 @@ public class NotificationFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        getNotifications(getActivity());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         getNotifications(getActivity());
     }
 
@@ -76,4 +90,5 @@ public class NotificationFragment extends Fragment {
             }
         });
     }
+
 }
